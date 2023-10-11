@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  class="header">
+
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Home</title>
+
+</head>
+<body>
+    <link rel="stylesheet" href="https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link-->
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<!--header section-->
+<header class="header">
+    <a href="home.html" class="logo" ><i class="fas fa-shopping-basket">Kent Solutions</i></a>
+    <nav class="navbar">
+        <a href="home.html" >Home</a>
+        <a href="shop.html" >Shop</a>
+        <a href="about.html" >About</a>
+        <a href="review.html" >Review</a>
+        <a href="blog.html" >Blog</a>
+        <a href="contact.html" >Contact</a>
+    </nav>
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bar"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" placeholder="search here..." id="search-box">
+        <label for="" class="fas fa-search"></label>
+    </form>
+    <div class="shopping-cart">
+        <!---
+        <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="img/1696253968410.jpg" height="20px" width="50px" alt="">
+            <div class="content">
+                <h3>TV Stans</h3>
+                <span class="quantity">1</span>
+                <span class="quantity">1</span>
+                <span class="quantity">R949.99</span>
+
+            </div>
+        </div>
+       
+    -->
+        <h3 class="total"> total: <span>R00.00</span></h3>
+        <a href="#" class="btn">Checkout</a>
+
+    </div>
+    <form action="" class="login-form">
+        <h3>login</h3>
+        <input type="email" placeholder="enter your email" class="box">
+        <input type="password" placeholder="enter your password" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me" >remember password</label>
+        </div>
+        <input type="submit" value="login now" class="btn">
+        <p>Forgot password? <a href="#">Click here</a></p>
+        <p>Don't have an account? <a href="#">Click here</a></p>
+    </form>
+
+
+
+</header>
+
+
+
+
+<!--header section ends-->
+<!--Home section -->
+<section class="home">
+
+    <div class="slide-container">
+
+        <div class="slide">
+            <div class="content">
+                <span>Plumbin is Taken care of<span>
+                <h3>Up to 20% discount</h3>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="image">
+                <img src="img/1696253968410.jpg" height="300px" width="300px">
+            </div>
+        </div>
+        
+       
+    </div>
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <span>Tiling<span>
+                <h3>Up to 20% discount</h3>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="image">
+                <img src="img/1696253968420.jpg" height="300px" width="300px">
+            </div>
+        </div>
+       
+       
+    </div>
+    <div class="slide-container">
+        <div class="slide">
+
+            <div class="content">
+                <span>Carpentry<span>
+                <h3>Up to 20% discount</h3>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="image">
+                <img src="img/1696253968410.jpg" height="300px" width="300px">
+            </div>
+        </div>
+       
+       
+    </div>
+    <div class="slide-container">
+        <div class="slide active">
+
+            <div class="content">
+                <span>High Quality Wood<span>
+                <h3>Up to 20% discount</h3>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="image">
+                <img src="img/1696253968437.jpg" height="300px" width="300px">
+            </div>
+
+        </div>
+       
+       
+    </div>
+
+    <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+    <div id="prev-slide" class="fas fa-angle-left" onclick="prev()"></div>
+</section>
+<!--Home section ends-->
+<!--The banner section-->
+<section class="banner-container">
+    <div class="banner">
+        <img src="img/1696253968410.jpg" alt="">
+        <div class="content">
+            <span>linked sales</span>
+            <h3>upto 20% discount</h3>
+            <a href="#" class="btn">View More</a>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="img/1696253968410.jpg" alt="">
+        <div class="content">
+            <span>linked sales</span>
+            <h3>upto 20% discount</h3>
+            <a href="#" class="btn">View More</a>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="img/1696253968410.jpg" alt="">
+        <div class="content">
+            <span>linked sales</span>
+            <h3>upto 20% discount</h3>
+            <a href="#" class="btn">View More</a>
+        </div>
+    </div>
+
+
+</section>
+<!--The banner section ends-->
+
+
+
+
+<!--Footer Section-->
+<section class="footer">
+
+    <div class="box-container">
+        
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="home.html" >Home</a>
+            <a href="shop.html" >Shop</a>
+            <a href="about.html" >About</a>
+            <a href="blog.html" >Blog</a>
+        
+        </div>
+
+        <div class="box">
+            <h3>Contact us</h3>
+            <p> <b>Call:</b> +2711169486</p>
+            <p ><b>WhatsApp:</b>+27604257819</p>
+           
+        
+        
+        </div>
+
+        <div class="box">
+            <h3>Follow Kent Solutions</h3>
+            <a href="#facebook.com">facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">TickTock</a>
+            <a href="#">instagram</a>
+
+        </div>
+
+        <div class="box">
+            <h3>newsletter<h3>
+           <p>Create an occount to get more updates from Kent Solutions</p>
+
+            <form action="">
+                <input type="email" placeholder="enter your email">
+                <input type submit="" value="joing" class="btn">
+            </form>
+
+           <img src="" class="payment" alt="">
+            
+        </div>
+
+
+    </div>
+
+
+</section>
+<section class="credits">created by Mr.Nukeri|All rights reserved</section>
+<!--Footer Section ends-->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
