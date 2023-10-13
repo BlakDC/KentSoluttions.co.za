@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapies.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://font.google/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 *{
     font-family:'Poppins' , sans-serif;
     margin:0; padding:0;
     box-sizing:border-box;
-    outline: none; border: none ;
+    outline: none;border: none ;
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
@@ -11,7 +11,7 @@
     
 }
 :root{
-    --green:#4ec367;
+    --green:#bac34e;
     --black:#222;
     --white:#fff;
     --light-color:rgb(95, 93, 93);
@@ -20,11 +20,6 @@
     --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-.kent_logo{
-    height: 30px;
-    width:50px;
-    align-self: center;
-}
 html{
     font-size: 62.5%;
     overflow-x:hidden;
@@ -69,10 +64,6 @@ html{
 .heading p a:hover{
     color: var(--green);
 }
-
-.catagory , .products , .gallary{
-    padding: 0 14rem;
-}
 .title{
     display: flex;
     align-items: center;
@@ -80,8 +71,7 @@ html{
     margin-bottom: 3rem;
     padding: 1.2rem 0;
     border-bottom: var(--border);
-    color: var(--black);
- 
+
 }
 .title span{
     color: var(--green);
@@ -94,13 +84,6 @@ html{
 }
 .title a:hover{
     color: var(--green);
-}
-@mixin grid($val)
-{
-    display:grid;
-    grid-template-columns: repeat(auto-fit , minmax($val , 1fr));
-    gap:1.5rem;
-
 }
 .header{
     position: fixed;
@@ -116,16 +99,17 @@ html{
 }
 .logo
 {
-    display: flex;
-    align-items: center;
    font-size: 2.5rem;
    font-weight: bolder;
    color: var(--black);
   
 }
 
-
-.logo:hover{
+.logo i{
+    color:var(--black);
+    padding-right:.5rem;
+}
+.logo i:hover{
     color: var(--green);
 }
 .navbar a{
@@ -312,9 +296,6 @@ html{
 }
 #menu-btn{
     display: none;
-   
-
-
 }
 .space{
     min-height:30vh;
@@ -369,18 +350,16 @@ html{
 }
 
 @keyframes fadeLeft{
-    0%{
-        
-        transform: translateX(-5rem);
+    100%{
         opacity: 0;
+        transform: translateX(.5rem);
     }
 
 }
 @keyframes fadeUp{
-    0%{
-       
-        transform: scale(.5);
+    100%{
         opacity: 0;
+        transform: scale(.5);
     }
 
 }
@@ -388,7 +367,7 @@ html{
 .home{
     min-height: 100vh;
     padding-top:14rem;
-    background: hsl(0, 4%, 80%);
+    background:url(../img/Log.jpg) no-repeat;
     background-size:cover;
     background-position:center;
     position:relative;
@@ -399,17 +378,15 @@ html{
     flex-wrap:wrap;
     gap:1.5rem;
     display:none;
-    padding: 0 14rem ; 
+}
+.home .slide-container .active{
+    display:flex;
 }
 .home .slide-container .slide .content{
     flex:1 1 40rem;
     animation: fadeLeft .4s linear .4s backwards;
 
 }
-.home .slide-container .active{
-    display:flex;
-}
-
 .home .slide-container .slide .content span{
     color:var(--light-color);
     font-size:2.5rem;
@@ -421,11 +398,10 @@ html{
 }
 .home .slide-container .slide .image{
     flex:1 1 40rem;
-    margin: 3rem 0;
 }
 .home .slide-container .slide .image img{
     width:100%;
-    animation: fadeUp .4s linear;
+    animation:fadeUp .4s linear;
 }
  #next-slide, #prev-slide{
 
@@ -458,7 +434,6 @@ html{
 }
 .banner-container{
 
-    @include grid(32rem);
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -484,19 +459,18 @@ html{
     transform: translateY(-50%);
 }
 .banner-container .banner .content span{
-    color: var(--black);
+    color: var(--light-color);
     font-size: 1.5rem;
 }
 .banner-container .banner .content h3{
     font-size: 2rem;
     padding-top: .5rem;
-    color: var(--light-bg);
+    color: var(--black);
 }
 .banner-container .banner .content .btn{
     padding: .8rem 2.5rem;
 }
 .catagory .box-container{
-    @inlude grid(16rem);
     display: flex;
     justify-content: space-around;
 }
@@ -608,7 +582,7 @@ html{
     
 }
 .about .content h3{
-    color: var(--black);
+    color: var(--green);
     font-size: 3rem;
     padding-top: .5rem;
 }
@@ -620,122 +594,57 @@ html{
 }
 
 
-.gallary .box-container
-{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   margin: .5rem;
-   padding: .5rem;
-   padding-top: 2rem;
 
-}
-.gallary .box-container .box{
-    height: 25rem;
-    overflow: hidden;
-    position: relative;
-    padding-top:2rem ;
 
-}
-.gallary .box-container .box img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 
-}
-.gallary .box-container .box:hover img {
-    transform:scale(1.2);
-}
-.gallary .box-container .box:hover .icons{
-    bottom: 0;
-}
 
-.gallary-image{
-    height: 200px;
-    width: 220px;
-}
-.gallary .box-container .box .icons
-{
-    text-align: center;
-    background-color: rgba(0,0,0,.7);
-    padding: 1.5rem 0;
-    position: absolute;
-    bottom: -6rem; left: 0; right: 0;
-    z-index: 10;
-}
-.gallary .box-container .box .icons p
-{
-    color: var(--light-bg);
-    font-size: 1.4rem;
-    line-height: 2;
-    padding: 1rem 0;
-}
+
+
+
+
+
+
+
 
 
 @media (max-width:991px){
 
-    html{
-        font-size: 55%;
-    }
-    .header{
-        padding: 2rem;
-    }
-
-    .home #next-slide,.home #prev-slide{
-        transform: translateY(0);
-        top: 88%;
-    }
-.home #prev-slide{
-        left: auto;
-        right: 8rem;
-    }
+	html{
+		font-size:55%;
+	}
+	.header{
+		padding:2rem;
+	}
 
 }
-
-
 
 
 
 @media (max-width:768px){
+
 #menu-btn{
 	display:inline-block;
-
 }
-.header .navbar  , .nav-active{
+.header .navbar , .nav-active{
 	position:absolute;
 	top:99%;	left:0; right:0;
 	background:var(--white);
 	border-top:var(--border);
 	border-bottom:var(--border);
-    clip-path:polygon(0 0, 100% 0 , 100% 0 , 0 0);
+	clip-path:polygon(0 0, 100% 0 , 100% 0 , 0 0);
 }
 .header .nav-active{
-    clip-path:polygon(0 0, 100% 0 , 100% 100% , 0 100%);
-
+	clip-path:polygon(0 0, 100% 0 , 100% 100% , 0 100%);
 }
-.header .search-form , .active-search-form{
-    width: 100%;
-    right: 0;
-    border-radius: 0;
-
-}
-.header .active-search-form{
-    top: 99%;
-    border-top: var(--border);
-    border-bottom: var(--border);
-}
-.header a{
+.header .navbar a{
 	margin:1.5rem;
 	padding:1.5rem;
 	background:var(--light-bg);
 	font-size:2rem;
 	display:block;
 	border-radius:.5rem;
-	/*;*/
+	
 }
-
-
-
 
 
 }
@@ -745,8 +654,5 @@ html{
 	html{
 		font-size:50%;
 	}
-    .home .slide-container .slide .content h3{
-        font-size: 5rem;
-    }
 
 }
