@@ -590,16 +590,16 @@ html{
     gap: 1.5rem;
 }
 .about .image{
-    flex: 1 1 40rem;
+    flex: 1 1 2rem;
 
 }
 .about .image img{
-    width: 100%;
+    width: 50%;
     
 } 
 
 .about .content{
-    flex: 1 1 40rem;
+    flex: 1 1 20rem;
     
 }
 .about .content span{
@@ -669,6 +669,94 @@ html{
     font-size: 1.4rem;
     line-height: 2;
     padding: 1rem 0;
+}
+
+
+.about .image{
+    overflow: hidden;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+
+}
+.contact{
+    width: 100%;
+}
+.contact .icons-container{
+   display: flex;
+   flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.contact .icons-container .icons{
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+.contact .icons-container .icons i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    background: var(--green);
+    color: var(--white);
+    border-radius:50% ;
+
+}
+.contact .icons-container .icons h3{
+    color: var(--black);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.contact .icons-container .icons p{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.row form{
+    padding: 2rem;
+    border: var(--border);
+    flex: 1 1 40rem;
+}
+.row form h3{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    color:var(--black) ;
+}
+.row form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.row form .inputBox input{
+    width: 49%;
+}
+.row form .inputBox .box , textarea{
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    color: var(--black) ;
+    text-transform: none;
+    margin: .7rem 0;
+}
+textarea{
+    width: 100%;
+    height: 15rem;
+    resize: none;
+
+}
+.row .map{
+    flex: 1 1 40rem;
+    width: 100%;
 }
 
 
@@ -747,6 +835,9 @@ html{
 	}
     .home .slide-container .slide .content h3{
         font-size: 5rem;
+    }
+    .contact .row form .inputBox{
+        width: 100%;
     }
 
 }
