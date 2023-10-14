@@ -25,12 +25,12 @@
 <header class="header">
     <a href="index.html" class="logo" ><img src="img/Kent_logo.png" class="kent_logo" alt="">Kent Solutions</a>
     <nav class="navbar">
-        <a href="index.html" >Home</a>
-        <a href="shop.html" >Shop</a>
-        <a href="About.html" >About</a>
-        <a href="review.html" >Review</a>
-        <a href="blog.html" >Blog</a>
-        <a href="contact.html" >Contact</a>
+        <a href="index.html" id="index" >Home</a>
+        <a href="shop.html" id="shop" >Shop</a>
+        <a href="About.html" id="about" >About</a>
+        <a href="review.html" id="review" >Review</a>
+        <a href="blog.html"  id="blog">Blog</a>
+        <a href="contact.html" id="contact" >Contact</a>
     </nav>
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars">.</div>
@@ -114,26 +114,65 @@
 
 <!--header section ends-->
 
-<div class="heading">
-    <h1>About Us</h1>
-    <p> <a href="home.html">home >></a> About</p>
-</div>
-<section class="about">
-    <div class="image ">
-        <img src="img/Kent_logo.png" alt="">
-    </div>
-    <div class="content">
-        
-        <div class="box">
-            <div class="box">
-                <h3>Contact us</h3>
-                <p> <b>Call:</b> +2711169486</p>
-                <p ><b>WhatsApp:</b>+27604257819</p>
 
-            </div>
+
+
+<div class="heading">
+    <h1>Contuct Us</h1>
+    <p> <a href="index.html">home >></a> Contacts</p>
+</div>
+
+
+<section class="contact">
+
+    <div class="icons-container">
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>our number</h3>
+            <p>+2711169486</p>
+            <p>+27604257819</p>
         </div>
+
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>our email</h3>
+            <p>Kennymonyela07@gmail.com</p>
+           
+        </div>
+        <div class="icons">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>our adress</h3>
+            <p> <b>Postal:</b>Motupa village , zone 2, TZANEEN , LIMPOPO, 0850</p>
+            <p><b>Residential:</b>Motupa village , zone 2, TZANEEN , LIMPOPO , 0850</p>
+            
+            
+        </div>
+
+        
+
+    </section>
+    <div class="row">
+        <form action="" method="">
+            <h3>get in touch</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="enter your name"  id="name" class="box" autocomplete="off">
+                <input type="email" placeholder="enter your email" id="email" class="box" autocomplete="off">
+                <input type="text" placeholder="Subject"  id="subject"class="box" autocomplete="off">
+            </div>
+            <textarea placeholder="your message" id="" cols="30" rows="10"></textarea>
+            <button id="btn" class="btn">Send</button>
+        </form>
     </div>
-</section>
+    <iframe class="map" src="" frameborder="0" ></iframe>
+
+</div>
+
+
+
+
+
+
+
 
 
 <!--Footer Section-->
@@ -155,6 +194,7 @@
                 <h3>Contact us</h3>
                 <p> <b>Call:</b> +2711169486</p>
                 <p ><b>WhatsApp:</b>+27604257819</p>
+                <p> <b>e-mail:</b> Kennymonyela07@gmail.com</p>
                
             
             
@@ -195,4 +235,39 @@
 <script src="js/script.js"></script>
 
 </body>
+<script src="https://smtpjs.com/v3/smtp.js">
+
+</script>
+<script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function(e){
+        e.preventDefault()
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        var body = 'name:' + name + '<br/' +
+                    'email:' + email + '<br/' +
+                    'subject' + subject + '<br/>' +
+                    'message' + message;
+
+                    
+            Email.send({
+        Host    : "smtp.gmail.com",
+        Username: "Kennymonyela07@gmail.com",
+        Password: "Password",
+        To : email,
+        From : 'Kennymonyela07@gmail.com',
+        Subject :subject,
+        Body : body
+        }).then(
+            Message => alert(message)
+        )
+
+
+
+
+
+    })
+</script>
 </html>
